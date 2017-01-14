@@ -4,7 +4,6 @@
 
 // C++ includes
 #include <string>
-#include <WinSock2.h>
 
 // Local includes
 #include "Types.h"
@@ -38,8 +37,6 @@ namespace OmronEipCpp {
 		bool isClosed();
 
 	private:
-		SOCKET EipSocket;
-
 		byte cmd[1000];
 		byte res[1000];
 		byte sessionHandle[4];

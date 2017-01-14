@@ -7,7 +7,7 @@
 namespace OmronEipCpp {
 	class PLCData {
 	public:
-		PLCData::PLCData(const std::string &name, const std::string &protocol, const std::string &ip, const std::string &port, const std::string &SNA, const std::string &DNA, const std::string &DA1);
+		PLCData(const std::string &name, const std::string &protocol, const std::string &ip, const std::string &port, const std::string &SNA, const std::string &DNA, const std::string &DA1);
 		std::string getName();
 		std::string getProtocol();
 		std::string getIP();

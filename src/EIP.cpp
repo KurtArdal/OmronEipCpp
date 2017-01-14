@@ -1,11 +1,13 @@
 // C++ includes
 #include <string>
+#include <iostream>
 
 // Local includes
 #include "EIP.h"
 
 namespace OmronEipCpp {
 	bool EIP::openSocket(std::string ip) {
+		std::cout << "Fungerer" << std::endl;
 		return true;
 	}
 	bool EIP::connected() {
