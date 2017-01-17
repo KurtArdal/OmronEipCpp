@@ -5,6 +5,7 @@
 // C++ includes
 #include <string>
 
+
 // Local includes
 #include "Types.h"
 #include "UCCM.h"
@@ -25,18 +26,20 @@ namespace OmronEipCpp {
 		byte lowByte(int myInt);
 		byte highByte(int myInt);
 
-		bool isArrayMember(std::string tagName);
-		std::string getTagnameFromMember(std::string &tagName);
+		bool isArrayMember(const std::string& tagName);
+		std::string getTagnameFromMember(const std::string &tagName);
 
-		std::vector<std::string> getStructureMembers(std::string fullTagName);
-		int getIndexFromArray(std::string tagName);
+		std::vector<std::string> getStructureMembers(const std::string& fullTagName);
+		int getIndexFromArray(const std::string& tagName);
 
 		std::vector<byte> buildMessageSection(bool rw, std::string fullTagName, UCCM_Message message);
-		std::vector<std::string> convertFromBytes(UCCM_Message repsonse);
+		std::vector<std::string> convertFromBytes(UCCM_Message& response);
 
 		bool isClosed();
 
 	private:
+		
+
 		byte cmd[1000];
 		byte res[1000];
 		byte sessionHandle[4];
