@@ -38,6 +38,10 @@ namespace OmronEipCpp {
 			this->_data = data;
 		}
 
+		int getDataSize() {
+			return this->_data.size();
+		}
+
 	private:
 		byte _datatype;
 		short _structCode;

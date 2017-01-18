@@ -272,7 +272,18 @@ namespace OmronEipCpp {
 
 	std::vector<std::string> EIP::convertFromBytes(UCCM_Message& response){
 		byte datatype = response.getDatatype();
-		
+		std::vector<byte> data = response.getData();
+		int datalength = response.getDataSize();
+
+		std::vector<std::string> result;
+
+		switch (datatype) {
+		case (byte)0xC3:
+			for (std::vector<byte>::const_iterator it = data.begin(); it != data.end(); it += 2) {
+				int16_t num = (*it << 8) + *(it + 1);
+				result.push_back(std::to_string(num));
+			}
+		}
 	}
 	
 	bool EIP::isClosed(){
