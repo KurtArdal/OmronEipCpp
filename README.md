@@ -1,3 +1,3 @@
-EIP library for Omron PLC's.
+C++ EIP library for Omron PLC's.
 
 
