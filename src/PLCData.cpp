@@ -2,7 +2,7 @@
 #include <string>
 
 // Local includes
-#include "PLCData.h"
+#include "../includes/PLCData.h"
 namespace OmronEipCpp{
 	PLCData::PLCData(const std::string &name, const std::string &protocol, const std::string &ip, const std::string &port, const std::string &SNA, const std::string &DNA, const std::string &DA1){
 		this->_name = name;

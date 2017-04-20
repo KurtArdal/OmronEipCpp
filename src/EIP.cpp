@@ -5,7 +5,7 @@
 #include <vector>
 
 // Local includes
-#include "EIP.h"
+#include "../includes/EIP.h"
 
 namespace OmronEipCpp {
 	bool EIP::openSocket(std::string ip) {
